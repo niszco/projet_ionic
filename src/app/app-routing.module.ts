@@ -10,9 +10,18 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
-  },  {
+  },
+  {
     path: 'achat-list',
     loadChildren: () => import('./achat-list/achat-list.module').then( m => m.AchatListPageModule)
+  },
+  {
+    path: 'about_us',
+    loadChildren: () => import('./about/about.module').then( m => m.AboutPageModule)
+  },
+  {
+    path: 'tab',
+    loadChildren: () => import('./tab/tab.module').then( m => m.TabPageModule)
   },
 
 ];
