@@ -10,7 +10,11 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },  {
+    path: 'achat-list',
+    loadChildren: () => import('./achat-list/achat-list.module').then( m => m.AchatListPageModule)
   },
+
 ];
 
 @NgModule({
