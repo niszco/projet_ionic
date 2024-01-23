@@ -5,7 +5,7 @@ import { AchatListPage } from './achat-list.page';
 
 const routes: Routes = [
   {
-    path: 'achat-list',
+    path: '',
     component: AchatListPage
   }
 ];
