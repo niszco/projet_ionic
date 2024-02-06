@@ -9,7 +9,7 @@
   <ion-button routerLink="new">Créer votre widget d'achat</ion-button>
   <ion-grid>
     <ion-row>
-      <ion-col size="3" *ngFor="let achat of achats">
+      <ion-col size="6" *ngFor="let achat of achats">
         <ion-card [routerLink]="[achat.id]">
           <img [src]="achat.image" [alt]="achat.name">
           <h6>{{achat.name}}</h6>
