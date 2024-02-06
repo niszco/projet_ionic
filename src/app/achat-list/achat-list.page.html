@@ -4,11 +4,17 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-    <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-back-button defaultHref="/home"></ion-back-button>
-      </ion-buttons>
-      <ion-title size="large">Liste de mes achats</ion-title>
-    </ion-toolbar>
+<ion-content>
+  <h2>Création d'un nouveau film</h2>
+  <ion-button routerLink="/films/new">Création</ion-button>
+  <h2>Liste des films</h2>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4" *ngFor="let achat of achats">
+        <ion-card [routerLink]="['/achat-list', achats.id]">
+          <img [src]="achats.image" [alt]="achats.name">
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

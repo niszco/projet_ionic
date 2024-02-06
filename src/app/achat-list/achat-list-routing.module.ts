@@ -7,6 +7,14 @@ const routes: Routes = [
   {
     path: '',
     component: AchatListPage
+  },
+  {
+    path: 'new',
+    loadChildren: () => import('./achat-new/achat-new.module').then( m => m.AchatNewPageModule)
+  },
+  {
+    path: ':id',
+    loadChildren: () => import('./achat/achat.module').then( m => m.AchatPageModule)
   }
 ];
 
@@ -14,4 +22,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class AchatListPageRoutingModule {}
+export class FilmsListPageRoutingModule {}
