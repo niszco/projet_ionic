@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/achat-list"></ion-back-button>
+    </ion-buttons>
+    <ion-title *ngIf="achat">{{ achat.name }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-button (click)="setModif()">Rendre Modifiable</ion-button>
+  <div *ngIf="!modif">
+    <ion-grid *ngIf="achat">
+      <ion-row>
+        <ion-col>
+          <ion-button (click)="onDelete(achat.id)">
+            <ion-icon name="trash"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <img [src]="achat.image" [alt]="achat.name">
+        </ion-col>
+        <ion-col>
+          <strong>Nom</strong><br>
+          {{achat.name}} <br>
+          <strong>Prix</strong><br>
+          {{achat.price + "€"}} <br>
+          <strong>Description</strong><br>
+          {{achat.desc}} <br>
+          <strong>Lien du produit</strong><br>
+          {{achat.link}} <br>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <div *ngIf="modif">
+    <ion-item>
+      <ion-input type="text" label="Image" [(ngModel)]="achat.image"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" label="Name" [(ngModel)]="achat.name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" label="Prix" [(ngModel)]="achat.price"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" label="Description" [(ngModel)]="achat.desc"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="link" label="Lien" [(ngModel)]="achat.link"></ion-input>
+    </ion-item>
+    <p class="text-center">
+      <ion-button (click)="onModif()">Modifier</ion-button>
+    </p>
+  </div>
+</ion-content>

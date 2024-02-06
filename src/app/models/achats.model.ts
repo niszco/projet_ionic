@@ -4,6 +4,7 @@ export class Achats {
     name: string;
     desc: string;
     price: number;
+    link: string;
 
 
     constructor() {
@@ -11,5 +12,6 @@ export class Achats {
         this.name = '';
         this.desc = '';
         this.price = 0;
+        this.link = '';
     }
 }

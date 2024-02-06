@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/achat-list"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Nouveau widget pour votre liste d'achats</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-item>
+      <ion-input type="text" label="Image" [(ngModel)]="achats.image"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" label="Name" [(ngModel)]="achats.name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" label="Prix" [(ngModel)]="achats.price"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" label="Description" [(ngModel)]="achats.desc"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="link" label="Lien" [(ngModel)]="achats.link"></ion-input>
+    </ion-item>
+  <p class="text-center">
+    <ion-button (click)="add()">Envoyer</ion-button>
+  </p>
+</ion-content>
