@@ -1,0 +1,58 @@
+ion-header {
+    --background: #4d8af0; // A bright and inviting blue for the header background
+    --ion-color-primary-contrast: #ffffff; // White text for contrast and readability
+  
+    ion-toolbar {
+        --background: var(--background);
+        border-bottom: 2px solid darken(#4d8af0, 10%);
+      
+      ion-title {
+        text-align: center;
+        color: var(--ion-color-primary-contrast); // White title text for clear visibility
+      }
+    }
+  
+    ion-back-button {
+      --color: #fff; // White back button for consistency with the title
+    }
+  }
+  
+  ion-content {
+    background-color: #f4f5f8; // A soft grey background for the content area
+    text-align: center; // Center alignment for the text and elements within the content
+  
+    ion-button {
+      --background: #ff9500; // A vibrant orange for buttons, indicating action or emphasis
+      --color: #ffffff; // White text on buttons for contrast
+      margin: 8px 0; // Vertical margin for spacing around buttons
+  
+      ion-icon {
+        --color: #ffffff; // Ensures icons within buttons also adhere to the color scheme
+      }
+    }
+  
+    .text-center {
+      text-align: center; // Ensures text alignment is centered, useful for wrapping elements
+    }
+
+    ion-item {
+      --padding-start: 8px; // Padding on the start side for some inner spacing
+      --inner-padding-end: 8px; // Padding on the end side within the item
+      --border-style: solid; // Solid border style for clarity
+      --border-width: 1px; // Thin border width for a refined look
+      --placeholder-color: #999; // Lighter grey for placeholder text, distinguishing it from input text
+    }
+  
+    ion-input {
+      --padding-start: 8px; // Padding start for inputs, aligning text properly
+      --padding-end: 8px; // Padding end, ensuring text does not touch the edges
+    }
+  }
+  
+  // Responsive settings :
+  @media (max-width: 600px) {
+    ion-col[size="6"] {
+      size: 12;
+    }
+  }
+  

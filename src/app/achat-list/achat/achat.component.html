@@ -7,16 +7,8 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <ion-button (click)="setModif()">Rendre Modifiable</ion-button>
   <div *ngIf="!modif">
     <ion-grid *ngIf="achat">
-      <ion-row>
-        <ion-col>
-          <ion-button (click)="onDelete(achat.id)">
-            <ion-icon name="trash"></ion-icon>
-          </ion-button>
-        </ion-col>
-      </ion-row>
       <ion-row>
         <ion-col>
           <img [src]="achat.image" [alt]="achat.name">
@@ -54,4 +46,16 @@
       <ion-button (click)="onModif()">Modifier</ion-button>
     </p>
   </div>
+  <ion-row>
+    <ion-col>
+      <ion-button (click)="setModif()">Rendre Modifiable</ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button (click)="onDelete(achat.id)">
+        <ion-icon name="trash"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
 </ion-content>
